@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOL LMAO</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 600px;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in;
+        }
+        
+        .message {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: bounce 2s infinite;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .redirect-text {
+            font-size: 1rem;
+            opacity: 0.7;
+            margin-top: 2rem;
+        }
+        
+        .countdown {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffd700;
+            margin-top: 1rem;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .emoji {
+            font-size: 3rem;
+            margin: 1rem 0;
+            animation: rotate 3s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">🤡</div>
+        <div class="message">LOL LMAO</div>
+        <div class="subtitle">You scanned a random QR code at a hacking conference!!!</div>
+        <div class="redirect-text">Maybe you shouldn't do that..? Redirecting you anyways to portrait.so/noid</div>
+        <div class="countdown" id="countdown">5</div>
+    </div>
+
+    <script>
+        let countdown = 5;
+        const countdownElement = document.getElementById('countdown');
+        
+        const timer = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+            
+            if (countdown <= 0) {
+                clearInterval(timer);
+                window.location.href = 'https://luma.com/p8l5b8pp?from=embed';
+            }
+        }, 1000);
+    </script>
+</body>
+</html> 
